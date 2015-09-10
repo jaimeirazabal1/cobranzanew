@@ -1,0 +1,305 @@
+2015-09-03 18:08:36 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'cobranza_new\'',
+  'enabled' => true,
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\wamp\www\cobranza\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3539): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('permisos')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#7 C:\wamp\www\cobranza\app\Controller\AppController.php(115): Model->find('first', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 C:\wamp\www\cobranza\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#10 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#12 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-03 18:08:59 Error: [MissingTableException] Table permisos for model Permiso was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'permisos',
+  'class' => 'Permiso',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('permisos')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#3 C:\wamp\www\cobranza\app\Controller\AppController.php(115): Model->find('first', Array)
+#4 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#5 C:\wamp\www\cobranza\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#8 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#9 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-03 18:10:09 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('users')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('list', Array)
+#3 C:\wamp\www\cobranza\app\Controller\GestionController.php(21): Model->find('list', Array)
+#4 [internal function]: GestionController->admin_index()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-03 18:13:20 Error: [MissingTableException] Table gestors for model Gestor was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'gestors',
+  'class' => 'Gestor',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('gestors')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\GestionController.php(25): Model->find('all', Array)
+#4 [internal function]: GestionController->admin_index()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-03 18:15:39 Error: [MissingTableException] Table clientes for model Cliente was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'clientes',
+  'class' => 'Cliente',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('clientes')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('list', Array)
+#3 C:\wamp\www\cobranza\app\Controller\GestionController.php(31): Model->find('list', Array)
+#4 [internal function]: GestionController->admin_index()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-03 18:16:26 Error: [MissingTableException] Table productos for model Producto was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'productos',
+  'class' => 'Producto',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('productos')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('list', Array)
+#3 C:\wamp\www\cobranza\app\Controller\GestionController.php(40): Model->find('list', Array)
+#4 [internal function]: GestionController->admin_index()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-03 18:17:13 Error: [MissingTableException] Table cobranzas for model Cobranza was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'cobranzas',
+  'class' => 'Cobranza',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('cobranzas')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\GestionController.php(75): Model->find('all', Array)
+#4 [internal function]: GestionController->admin_index()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-03 18:29:18 Error: [MissingTableException] Table cobranzas for model Cobranza was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'cobranzas',
+  'class' => 'Cobranza',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('cobranzas')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\GestionController.php(75): Model->find('all', Array)
+#4 [internal function]: GestionController->admin_index()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-03 18:30:13 Error: [MissingTableException] Table cobranzas for model Cobranza was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'cobranzas',
+  'class' => 'Cobranza',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('cobranzas')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\GestionController.php(75): Model->find('all', Array)
+#4 [internal function]: GestionController->admin_index()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-03 18:33:44 Error: [MissingTableException] Table cobranzas for model Cobranza was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'cobranzas',
+  'class' => 'Cobranza',
+  'ds' => 'default',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('cobranzas')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\GestionController.php(75): Model->find('all', Array)
+#4 [internal function]: GestionController->admin_index()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-03 18:35:21 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cobranzanew.clien_gests' doesn't exist
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\cobranza\app\Controller\GestionController.php(75): Model->find('all', Array)
+#7 [internal function]: GestionController->admin_index()
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-03 18:44:33 Error: [MissingTableException] Table attempts for model Attempt was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'attempts',
+  'class' => 'Attempt',
+  'ds' => 'default',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('attempts')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3066): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2979): Model->_findCount('before', Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2914): Model->buildQuery('count', Array)
+#4 C:\wamp\www\cobranza\app\Plugin\Attempt\Model\Attempt.php(13): Model->find('count', Array)
+#5 C:\wamp\www\cobranza\app\Plugin\Attempt\Model\Attempt.php(17): Attempt->count('::1', 'login')
+#6 C:\wamp\www\cobranza\app\Plugin\Attempt\Controller\Component\AttemptComponent.php(35): Attempt->limit('::1', 'login', 3)
+#7 C:\wamp\www\cobranza\app\Controller\UsersController.php(36): AttemptComponent->limit('login', 3)
+#8 [internal function]: UsersController->login()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-03 18:58:10 Error: [MissingTableException] Table desincorporados for model Desincorporado was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'desincorporados',
+  'class' => 'Desincorporado',
+  'ds' => 'default',
+)
+Request URL: /cobranza/cartera/admin_recepcion_cartera
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('desincorporados')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp\www\cobranza\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Desincorporado', 'fields')
+#4 C:\wamp\www\cobranza\app\View\Cartera\admin_recepcion_cartera.ctp(10): FormHelper->create(NULL, Array)
+#5 C:\wamp\www\cobranza\lib\Cake\View\View.php(948): include('C:\\wamp\\www\\cob...')
+#6 C:\wamp\www\cobranza\lib\Cake\View\View.php(910): View->_evaluate('C:\\wamp\\www\\cob...', Array)
+#7 C:\wamp\www\cobranza\lib\Cake\View\View.php(471): View->_render('C:\\wamp\\www\\cob...')
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CarteraController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-03 19:01:03 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php, line 458]
+2015-09-03 19:01:03 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 458)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 458, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 458, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-03 19:01:05 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Model\Datasource\CakeSession.php, line 661]
+2015-09-03 19:01:05 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-03 19:01:08 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Model\Datasource\CakeSession.php, line 661]
+2015-09-03 19:01:08 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/users/logout
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-03 19:01:10 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Model\Datasource\CakeSession.php, line 661]
+2015-09-03 19:01:10 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/cartera/admin_recepcion_cartera
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-03 19:01:13 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Model\Datasource\CakeSession.php, line 661]
+2015-09-03 19:01:13 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/cartera/admin_recepcion_cartera
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 661, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-03 19:01:19 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Model\Datasource\Database\Mysql.php, line 183]
+2015-09-03 19:01:19 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/users/logout
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 183)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 183, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\wamp\\www\\cob...', 183, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
