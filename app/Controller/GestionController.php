@@ -12,51 +12,42 @@ App::uses('AppController', 'Controller');
 class GestionController extends AppController {
 	public $components = array('Paginator', 'Attempt.Attempt');
 	public $uses = array('User','Role','Cliente','Statu','Producto','Cobranza','Gestor','ClienGest','Data','Status','Contacto','Telefono','ClienPago','Dia','Datatel','Datastatu','ClienProd');
-	public $paginate ;
+	public $paginate;
 	public function prueba_index(){
-		
-		$fields = array('ClienGest.*','Cobranza.*','Gestor.*'); // <- insert this
-		//$conditions = array( 'TravancoDSREmployee.created_emp_id' => $emp_id);
-		$group = array('Cobranza.CEDULAORIF');
-		$limit = 5;
-		$joins = array();
-		$joins[] = array(
-				array(
-					'table' => 'clien_gests',
-					'alias' => 'ClienGest',
-					'type' => 'INNER',
-					'conditions' => array(
-						'ClienGest.cedulaorif = Cobranza.CEDULAORIF',
-						'ClienGest.numero = Cobranza.UltGestion',
-					)
-				),
-				array(
-					'table' => 'gestors',
-					'alias' => 'Gestor',
-					'type' => 'INNER',
-					'conditions' => array(
-						'Gestor.Clave = Cobranza.Gestor',
-					),
-				),
-				array(
-					'table' => 'users',
-					'alias' => 'User',
-					'type' => 'INNER',
-					'conditions' => array(
-						'User.id = Gestor.user_id',
-					)
-				)
-			);
-
-		$this->paginate = compact('fields' , 'joins' , 'group', 'limit');
-
-		$data = $this->paginate(array('ClienGest','Cobranza'));
-		$this->set('data', $data);
-
-	    /*$this->Paginator->settings = $this->paginate;
-
-	    // similar to findAll(), but fetches paged results
-	    $data = $this->Paginator->paginate('ClienGest',array(
+		$this->paginate = array(
+	        'limit' => 5
+	    );
+	    $this->set('data', $data);
+	}
+	public function admin_index() {
+		//Datos para la busquedas
+		$supervisors = $this->User->find('list',array(
+			'fields' => array('id','nombre_completo'),
+			'conditions' => array('User.rol' => 'supervisor')
+		));
+		$gestores_b = $this->Gestor->find('all',array( // operadores¿?
+			'fields' => array('Clave','User.nombre_completo','User.supervisor_id'),
+			'conditions' => array('User.supervisor_id <>' => '0')
+		));
+		foreach ($gestores_b as $g) {
+			$gestores[$g['Gestor']['Clave']] = $g['User']['nombre_completo'];
+		}
+		$clientes = $this->Cliente->find('list',array(
+			'fields' => array('rif','nombre')
+		));
+		$status = $this->Statu->find('list',array(
+			'fields' => array('codigo','condicion')
+		));
+		$contactos = $this->Contacto->find('list',array(
+			'fields' => array('codigo','nombre')
+		));
+		$productos = $this->Producto->find('list',array(
+			'fields' => array('codigo','producto')
+		));
+		$this->set(compact('supervisors','clientes','status','productos','gestores','contactos'));
+		$this->paginate = array('limit' => 10);
+		//Deudores
+		/*$deudores = $this->Cobranza->find('all',array(
 			
 			'fields' => array('ClienGest.*','Cobranza.*','Gestor.*'),
 			'group' => array('Cobranza.CEDULAORIF'),
@@ -88,68 +79,9 @@ class GestionController extends AppController {
 				)
 			),
 		));*/
-	    $this->set('data', $data);
-	}
-	public function admin_index() {
-		//Datos para la busquedas
-		$supervisors = $this->User->find('list',array(
-			'fields' => array('id','nombre_completo'),
-			'conditions' => array('User.rol' => 'supervisor')
-		));
-		$gestores_b = $this->Gestor->find('all',array( // operadores¿?
-			'fields' => array('Clave','User.nombre_completo','User.supervisor_id'),
-			'conditions' => array('User.supervisor_id <>' => '0')
-		));
-		foreach ($gestores_b as $g) {
-			$gestores[$g['Gestor']['Clave']] = $g['User']['nombre_completo'];
-		}
-		$clientes = $this->Cliente->find('list',array(
-			'fields' => array('rif','nombre')
-		));
-		$status = $this->Statu->find('list',array(
-			'fields' => array('codigo','condicion')
-		));
-		$contactos = $this->Contacto->find('list',array(
-			'fields' => array('codigo','nombre')
-		));
-		$productos = $this->Producto->find('list',array(
-			'fields' => array('codigo','producto')
-		));
-		$this->set(compact('supervisors','clientes','status','productos','gestores','contactos'));
-		
-		//Deudores
-		$deudores = $this->Cobranza->find('all',array(
-			
-			'fields' => array('ClienGest.*','Cobranza.*','Gestor.*'),
-			'group' => array('Cobranza.CEDULAORIF'),
-			'joins' => array(
-				array(
-					'table' => 'clien_gests',
-					'alias' => 'ClienGest',
-					'type' => 'INNER',
-					'conditions' => array(
-						'ClienGest.cedulaorif = Cobranza.CEDULAORIF',
-						'ClienGest.numero = Cobranza.UltGestion',
-					)
-				),
-				array(
-					'table' => 'gestors',
-					'alias' => 'Gestor',
-					'type' => 'INNER',
-					'conditions' => array(
-						'Gestor.Clave = Cobranza.Gestor',
-					),
-				),
-				array(
-					'table' => 'users',
-					'alias' => 'User',
-					'type' => 'INNER',
-					'conditions' => array(
-						'User.id = Gestor.user_id',
-					)
-				)
-			),
-		));
+		//$this->Paginator->settings = $this->paginate;
+		$deudores = $this->Paginator->paginate('Cobranza');
+		//die(var_dump($deudores));
 		$cedula_deudor = $deudores[0]['ClienGest']['cedulaorif'];
 		//Busco las empresas asociadas al primer deudor
 		$empresas = $this->Cobranza->buscarEmpresas($deudores[0]['ClienGest']['cedulaorif']);
@@ -169,6 +101,7 @@ class GestionController extends AppController {
 		));
 		$status_data_mol[0] = '';
 		$this->set(compact('deudores','gestiones','supervisor','empresas','data_deudor','cond_pago','telefonos','dias_no_laborables','telefonos_data_mol','status_data_mol','direccion_data_mol'));
+
 	}
 	
 	public function admin_gestion_dia(){

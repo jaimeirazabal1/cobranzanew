@@ -321,3 +321,1216 @@ Stack Trace:
 #13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #15 {main}
+2015-09-10 09:37:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(190): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(190): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-10 09:38:21 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Gestor'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/app/Controller/GestionController.php(152): Model->find('all', Array)
+#7 [internal function]: GestionController->admin_index()
+#8 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-10 09:40:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Gestor.user_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Gestor`...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Gestor`...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Gestor`...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Gestor), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/app/Controller/GestionController.php(102): Model->find('all', Array)
+#7 [internal function]: GestionController->admin_index()
+#8 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-10 10:03:58 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Gestor'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/app/Controller/GestionController.php(152): Model->find('all', Array)
+#7 [internal function]: GestionController->admin_index()
+#8 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-10 10:07:46 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/app/Controller/GestionController.php(145): Model->find('all', Array)
+#7 [internal function]: GestionController->admin_index()
+#8 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-10 10:08:20 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/app/Controller/GestionController.php(145): Model->find('all', Array)
+#7 [internal function]: GestionController->admin_index()
+#8 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-10 10:08:21 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Can\'t connect to local MySQL server through socket \'/var/run/mysqld/mysqld.sock\' (2)',
+  'enabled' => true,
+)
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cobranza/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Model.php(3539): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cobranza/lib/Cake/Model/Model.php(1136): Model->setDataSource('default')
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(3566): Model->setSource('permisos')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#6 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#7 /var/www/html/cobranza/app/Controller/AppController.php(115): Model->find('first', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/html/cobranza/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-10 10:08:35 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClienGest' in 'where clause'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(1080): PaginatorComponent->paginate(Array, Array, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(46): Controller->paginate(Array)
+#9 [internal function]: GestionController->prueba_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-10 10:09:04 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClienGest' in 'where clause'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(1080): PaginatorComponent->paginate(Array, Array, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(46): Controller->paginate(Array)
+#9 [internal function]: GestionController->prueba_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-10 10:09:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClienGest' in 'where clause'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(1080): PaginatorComponent->paginate(Array, Array, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(46): Controller->paginate(Array)
+#9 [internal function]: GestionController->prueba_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-10 10:14:37 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Gestor'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT * FROM `...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT * FROM `...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT * FROM `...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Gestor), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(51): PaginatorComponent->paginate('Gestor')
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:14:49 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Gestor'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT * FROM `...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT * FROM `...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT * FROM `...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Gestor), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(43): PaginatorComponent->paginate('Gestor')
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:15:01 Error: [MissingModelException] gestors
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/app/Controller/GestionController.php(43): PaginatorComponent->paginate('gestors')
+#1 [internal function]: GestionController->prueba_index()
+#2 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#3 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#5 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-09-10 10:15:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cobranza.CEDULAORIF' in 'on clause'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT *, `User...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT *, `User...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT *, `User...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(43): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:15:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cobranza.CEDULAORIF' in 'on clause'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT *, `User...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT *, `User...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT *, `User...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:16:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cobranza.CEDULAORIF' in 'on clause'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT *, `User...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT *, `User...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT *, `User...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:19:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cobranza.CEDULAORIF' in 'on clause'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT *, `User...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT *, `User...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT *, `User...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:19:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cobranza.CEDULAORIF' in 'on clause'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT *, `User...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT *, `User...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT *, `User...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:22:08 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Cobranza'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:22:17 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Cobranzas'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:23:25 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Cobranza'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:23:56 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'cobranzas'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(User), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate()
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:31:42 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(44): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:32:18 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'ClienGest'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(ClienGest), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(36): PaginatorComponent->paginate('ClienGest')
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:32:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'ClienGest'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `clien_g...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `clien_g...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `clien_g...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(ClienGest), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(36): PaginatorComponent->paginate('ClienGest')
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:32:34 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'ClienGest'
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `clien_g...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `clien_g...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `clien_g...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(ClienGest), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(36): PaginatorComponent->paginate('ClienGest')
+#8 [internal function]: GestionController->prueba_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:32:42 Error: [MissingModelException] clien_gests
+Request URL: /cobranza/gestion/prueba_index
+Stack Trace:
+#0 /var/www/html/cobranza/app/Controller/GestionController.php(36): PaginatorComponent->paginate('clien_gests')
+#1 [internal function]: GestionController->prueba_index()
+#2 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#3 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#5 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-09-10 10:33:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(89): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(89): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-10 10:34:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(89): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(89): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-10 10:35:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(89): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(89): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-10 10:35:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(89): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(89): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-10 10:35:54 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(81): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(81): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-10 10:39:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(97): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(97): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-10 10:40:54 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Gestor.user_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(84): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:47:11 Error: [PDOException] SQLSTATE[70100]: <<Unknown error>>: 1317 Query execution was interrupted
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(76): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-10 10:47:12 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Can\'t connect to local MySQL server through socket \'/var/run/mysqld/mysqld.sock\' (2)',
+  'enabled' => true,
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cobranza/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Model.php(3539): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cobranza/lib/Cake/Model/Model.php(1136): Model->setDataSource('default')
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(3566): Model->setSource('permisos')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#6 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#7 /var/www/html/cobranza/app/Controller/AppController.php(115): Model->find('first', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/html/cobranza/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 14:44:45 Error: [PDOException] SQLSTATE[70100]: <<Unknown error>>: 1317 Query execution was interrupted
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/app/Controller/GestionController.php(73): Model->find('all', Array)
+#7 [internal function]: GestionController->admin_index()
+#8 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-11 14:54:35 Error: Fatal Error (4): syntax error, unexpected '*' in [/var/www/html/cobranza/app/Controller/GestionController.php, line 101]
+2015-09-11 14:54:35 Error: [FatalErrorException] syntax error, unexpected '*'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/c...', 101)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/c...', 101, Array)
+#2 /var/www/html/cobranza/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/c...', 101, Array)
+#3 /var/www/html/cobranza/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-11 14:54:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(91): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(91): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-11 14:58:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(97): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(97): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-11 15:06:45 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'gestor INNER Array  WHERE 1 = 1  GROUP BY `Cobranza`.`CEDULAORIF`   LIMIT 10' at line 1
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Cobranz...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Cobranz...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Cobranz...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(94): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:09:07 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/cobranza/app/Controller/GestionController.php, line 60]
+2015-09-11 15:09:07 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/c...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/c...', 60, Array)
+#2 /var/www/html/cobranza/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/c...', 60, Array)
+#3 /var/www/html/cobranza/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-11 15:10:19 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'ClienGest'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Cobranz...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Cobranz...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Cobranz...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(104): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:10:41 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'ClienGest'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(104): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:11:51 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'clien_gests'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `clien_g...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `clien_g...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `clien_g...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(104): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:13:04 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'ClienGest'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(104): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:13:39 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'ClienGest'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(104): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:15:24 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'clien_gests'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `clien_g...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `clien_g...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `clien_g...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(103): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:16:17 Error: [PDOException] SQLSTATE[70100]: <<Unknown error>>: 1317 Query execution was interrupted
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `clien_g...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `clien_g...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `clien_g...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(103): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:16:18 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Can\'t connect to local MySQL server through socket \'/var/run/mysqld/mysqld.sock\' (2)',
+  'enabled' => true,
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cobranza/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Model.php(3539): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cobranza/lib/Cake/Model/Model.php(1136): Model->setDataSource('default')
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(3566): Model->setSource('permisos')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#6 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#7 /var/www/html/cobranza/app/Controller/AppController.php(115): Model->find('first', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/html/cobranza/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 15:16:34 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'clien_gests'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `clien_g...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `clien_g...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `clien_g...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(96): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:19:35 Error: Fatal Error (4): syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/var/www/html/cobranza/app/Controller/GestionController.php, line 56]
+2015-09-11 15:19:35 Error: [FatalErrorException] syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/c...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/c...', 56, Array)
+#2 /var/www/html/cobranza/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/c...', 56, Array)
+#3 /var/www/html/cobranza/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-11 15:19:38 Error: [PDOException] SQLSTATE[70100]: <<Unknown error>>: 1317 Query execution was interrupted
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `clien_g...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `clien_g...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `clien_g...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(102): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:19:50 Error: Fatal Error (4): syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/var/www/html/cobranza/app/Controller/GestionController.php, line 56]
+2015-09-11 15:19:50 Error: [FatalErrorException] syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/c...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/c...', 56, Array)
+#2 /var/www/html/cobranza/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/c...', 56, Array)
+#3 /var/www/html/cobranza/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-11 15:19:59 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'clien_gests'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `clien_g...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `clien_g...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `clien_g...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(104): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:20:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clien_gests.cedulaorif' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `c2`.*, ...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `c2`.*, ...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `c2`.*, ...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(104): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:22:43 Error: [PDOException] SQLSTATE[70100]: <<Unknown error>>: 1317 Query execution was interrupted
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `c3`.*, ...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `c3`.*, ...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `c3`.*, ...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(114): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:25:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClienGest.unique_id' in 'field list'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Cobranz...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Cobranz...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Cobranz...', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Cobranza), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/cobranza/app/Controller/GestionController.php(104): PaginatorComponent->paginate('Cobranza')
+#8 [internal function]: GestionController->admin_index()
+#9 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-09-11 15:26:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(106): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(106): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-11 15:35:34 Error: Fatal Error (4): syntax error, unexpected ')' in [/var/www/html/cobranza/app/Controller/GestionController.php, line 50]
+2015-09-11 15:35:34 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/c...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/c...', 50, Array)
+#2 /var/www/html/cobranza/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/c...', 50, Array)
+#3 /var/www/html/cobranza/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-11 15:41:29 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT COUNT(*)...')
+#4 [internal function]: DboSource->query('SELECT COUNT(*)...')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(3369): call_user_func_array(Array, Array)
+#6 /var/www/html/cobranza/app/Model/Cobranza.php(85): Model->query('SELECT COUNT(*)...')
+#7 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(204): Cobranza->paginateCount(Array, 1, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(85): PaginatorComponent->paginate('Cobranza')
+#9 [internal function]: GestionController->admin_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 15:41:29 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Can\'t connect to local MySQL server through socket \'/var/run/mysqld/mysqld.sock\' (2)',
+  'enabled' => true,
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cobranza/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Model.php(3539): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cobranza/lib/Cake/Model/Model.php(1136): Model->setDataSource('default')
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(3566): Model->setSource('permisos')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#6 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#7 /var/www/html/cobranza/app/Controller/AppController.php(115): Model->find('first', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/html/cobranza/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 15:41:58 Error: [MissingPluginException] Plugin SearchPagination could not be found.
+Exception Attributes: array (
+  'plugin' => 'SearchPagination',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Core/App.php(227): CakePlugin::path('SearchPaginatio...')
+#1 /var/www/html/cobranza/lib/Cake/Core/App.php(549): App::path('Controller/Comp...', 'SearchPaginatio...')
+#2 [internal function]: App::load('SearchPaginatio...')
+#3 [internal function]: spl_autoload_call('SearchPaginatio...')
+#4 /var/www/html/cobranza/lib/Cake/Controller/ComponentCollection.php(110): class_exists('SearchPaginatio...')
+#5 /var/www/html/cobranza/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('SearchPaginatio...', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(GestionController))
+#7 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(186): Controller->constructClasses()
+#8 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#9 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-11 15:42:47 Error: [MissingPluginException] Plugin SearchPagination could not be found.
+Exception Attributes: array (
+  'plugin' => 'SearchPagination',
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Core/App.php(227): CakePlugin::path('SearchPaginatio...')
+#1 /var/www/html/cobranza/lib/Cake/Core/App.php(549): App::path('Controller/Comp...', 'SearchPaginatio...')
+#2 [internal function]: App::load('SearchPaginatio...')
+#3 [internal function]: spl_autoload_call('SearchPaginatio...')
+#4 /var/www/html/cobranza/lib/Cake/Controller/ComponentCollection.php(110): class_exists('SearchPaginatio...')
+#5 /var/www/html/cobranza/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('SearchPaginatio...', Array)
+#6 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(GestionController))
+#7 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(186): Controller->constructClasses()
+#8 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#9 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-11 15:45:26 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT COUNT(*)...')
+#4 [internal function]: DboSource->query('SELECT COUNT(*)...')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(3369): call_user_func_array(Array, Array)
+#6 /var/www/html/cobranza/app/Model/Cobranza.php(85): Model->query('SELECT COUNT(*)...')
+#7 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(204): Cobranza->paginateCount(Array, 1, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(84): PaginatorComponent->paginate('Cobranza')
+#9 [internal function]: GestionController->admin_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 15:45:27 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Can\'t connect to local MySQL server through socket \'/var/run/mysqld/mysqld.sock\' (2)',
+  'enabled' => true,
+)
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cobranza/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Model.php(3539): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cobranza/lib/Cake/Model/Model.php(1136): Model->setDataSource('default')
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(3566): Model->setSource('permisos')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#6 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#7 /var/www/html/cobranza/app/Controller/AppController.php(115): Model->find('first', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/html/cobranza/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 15:47:48 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT COUNT(*)...')
+#4 [internal function]: DboSource->query('SELECT COUNT(*)...')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(3369): call_user_func_array(Array, Array)
+#6 /var/www/html/cobranza/app/Model/Cobranza.php(85): Model->query('SELECT COUNT(*)...')
+#7 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(204): Cobranza->paginateCount(Array, 1, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(83): PaginatorComponent->paginate('Cobranza')
+#9 [internal function]: GestionController->admin_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 16:08:47 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT COUNT(*)...')
+#4 [internal function]: DboSource->query('SELECT COUNT(*)...')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(3369): call_user_func_array(Array, Array)
+#6 /var/www/html/cobranza/app/Model/Cobranza.php(85): Model->query('SELECT COUNT(*)...')
+#7 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(204): Cobranza->paginateCount(Array, 1, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(83): PaginatorComponent->paginate('Cobranza')
+#9 [internal function]: GestionController->admin_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 16:10:11 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT COUNT(*)...')
+#4 [internal function]: DboSource->query('SELECT COUNT(*)...')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(3369): call_user_func_array(Array, Array)
+#6 /var/www/html/cobranza/app/Model/Cobranza.php(85): Model->query('SELECT COUNT(*)...')
+#7 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(204): Cobranza->paginateCount(Array, 1, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(83): PaginatorComponent->paginate('Cobranza')
+#9 [internal function]: GestionController->admin_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 16:20:50 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT COUNT(*)...')
+#4 [internal function]: DboSource->query('SELECT COUNT(*)...')
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(3369): call_user_func_array(Array, Array)
+#6 /var/www/html/cobranza/app/Model/Cobranza.php(85): Model->query('SELECT COUNT(*)...')
+#7 /var/www/html/cobranza/lib/Cake/Controller/Component/PaginatorComponent.php(204): Cobranza->paginateCount(Array, 1, Array)
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(83): PaginatorComponent->paginate('Cobranza')
+#9 [internal function]: GestionController->admin_index()
+#10 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-11 16:22:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Statu.cliente_id' in 'on clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Statu`....', Array)
+#2 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Statu`....', Array, Array)
+#3 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Statu`....', false)
+#4 /var/www/html/cobranza/lib/Cake/Model/Model.php(2947): DboSource->read(Object(Statu), Array)
+#5 /var/www/html/cobranza/lib/Cake/Model/Model.php(2919): Model->_readDataSource('first', Array)
+#6 /var/www/html/cobranza/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /var/www/html/cobranza/lib/Cake/Model/Model.php(808): DboSource->query('findByCodigo', Array, Object(Statu))
+#8 /var/www/html/cobranza/app/Controller/GestionController.php(94): Model->__call('findByCodigo', Array)
+#9 /var/www/html/cobranza/app/Controller/GestionController.php(94): Statu->findByCodigo(NULL)
+#10 [internal function]: GestionController->admin_index()
+#11 /var/www/html/cobranza/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#12 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/cobranza/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#14 /var/www/html/cobranza/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}

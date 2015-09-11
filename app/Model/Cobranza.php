@@ -37,7 +37,7 @@ class Cobranza extends AppModel {
 				'order' => array('ClienGest.id DESC')
 			));
 		}
-		return $gestiones;
+		return isset($gestiones) ? $gestiones : null;
 	}
 	
 	function buscarEmpresas($cedula){
@@ -56,6 +56,47 @@ class Cobranza extends AppModel {
 			),
 		));
 		return($empresas);
+	}
+	public function paginate($conditions = null, $fields = null, $order = null, $limit, $page = 1,$recursive = null, $extra = array()) {
+		
+		 
+		 $sql = "SELECT * from cobranzas
+				INNER JOIN clien_gests on clien_gests.cedulaorif = cobranzas.CEDULAORIF
+				INNER JOIN clien_gests c2 on c2.numero = cobranzas.UltGestion
+
+				INNER JOIN gestor on gestor.Clave = cobranzas.Gestor
+
+				limit $limit";
+		 $results = $this->query($sql);
+		 //die(var_dump($results));
+		 return $results;
+	}
+	public function paginateCount($conditions = null, $recursive = 0, $extra = array()) {
+		
+
+		/*$sql = "SELECT COUNT(*) from cobranzas
+				INNER JOIN clien_gests on clien_gests.cedulaorif = cobranzas.CEDULAORIF
+				INNER JOIN clien_gests c2 on c2.numero = cobranzas.UltGestion
+
+				INNER JOIN gestor on gestor.Clave = cobranzas.Gestor limit 10";
+
+		$this->recursive = -1;
+
+		$results = $this->query($sql);
+		 die(var_dump($results));
+		return $results[0][0]['count'];*/
+		 $conditions = compact('conditions');
+        if ($recursive != $this->recursive) {
+            $conditions['recursive'] = $recursive;
+        }
+        unset( $extra['contain'] );
+        $count = $this->find('count', array_merge($conditions, $extra));
+       
+            if (isset($extra['group'])) {
+                $count = $this->getAffectedRows();
+            }
+       
+        return $count;
 	}
 }
 
