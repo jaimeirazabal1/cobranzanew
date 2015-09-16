@@ -45,7 +45,37 @@ class GestionController extends AppController {
 			'fields' => array('codigo','producto')
 		));
 		$this->set(compact('supervisors','clientes','status','productos','gestores','contactos'));
-		$this->paginate = array('limit' => 10);
+		$this->paginate = array(
+			'limit' => 10,
+			'fields' => array('ClienGest.*','Cobranza.*','Gestor.*'),
+			'group' => array('Cobranza.CEDULAORIF'),
+			'joins' => array(
+				array(
+					'table' => 'clien_gests',
+					'alias' => 'ClienGest',
+					'type' => 'INNER',
+					'conditions' => array(
+						'ClienGest.cedulaorif = Cobranza.CEDULAORIF',
+						'ClienGest.numero = Cobranza.UltGestion',
+					)
+				),
+				array(
+					'table' => 'gestors',
+					'alias' => 'Gestor',
+					'type' => 'INNER',
+					'conditions' => array(
+						'Gestor.Clave = Cobranza.Gestor',
+					),
+				),
+				array(
+					'table' => 'users',
+					'alias' => 'User',
+					'type' => 'INNER',
+					'conditions' => array(
+						'User.id = Gestor.user_id',
+					)
+				)
+			));
 		//Deudores
 		/*$deudores = $this->Cobranza->find('all',array(
 			
@@ -81,7 +111,7 @@ class GestionController extends AppController {
 		));*/
 		//$this->Paginator->settings = $this->paginate;
 		$deudores = $this->Paginator->paginate('Cobranza');
-		//die(var_dump($deudores));
+		
 		$cedula_deudor = $deudores[0]['ClienGest']['cedulaorif'];
 		//Busco las empresas asociadas al primer deudor
 		$empresas = $this->Cobranza->buscarEmpresas($deudores[0]['ClienGest']['cedulaorif']);
@@ -91,7 +121,7 @@ class GestionController extends AppController {
 		$supervisor = $this->User->find('first',array('conditions' => array('User.id' => $gestiones[$empresas[0]['Cliente']['rif']][0]['User']['supervisor_id'])));
 		$supervisor = $supervisor['User']['nombre_completo'];
 		$data_deudor = $this->Data->buscarDatos($cedula_deudor);
-		$cond_pago = $this->Statu->findByCodigo($deudores[0]['ClienGest']['cond_deud']);
+		//$cond_pago = $this->Statu->findByCodigo($deudores[0]['ClienGest']['cond_deud']);
 		$telefonos  = $this->Telefono->buscarTelefonos($deudores[0]['ClienGest']['cedulaorif']);
 		$dias_no_laborables = $this->Dia->find('all');
 		$telefonos_data_mol = $this->Datatel->find('all',array('conditions' => array('Datatel.CedulaOrif' => $cedula_deudor)));
@@ -100,7 +130,7 @@ class GestionController extends AppController {
 			'fields' => array('unique_id','descripcion')
 		));
 		$status_data_mol[0] = '';
-		$this->set(compact('deudores','gestiones','supervisor','empresas','data_deudor','cond_pago','telefonos','dias_no_laborables','telefonos_data_mol','status_data_mol','direccion_data_mol'));
+		$this->set(compact('deudores','gestiones','supervisor','empresas','data_deudor','telefonos','dias_no_laborables','telefonos_data_mol','status_data_mol','direccion_data_mol'));
 
 	}
 	

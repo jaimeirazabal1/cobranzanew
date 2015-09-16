@@ -57,7 +57,7 @@ class Cobranza extends AppModel {
 		));
 		return($empresas);
 	}
-	public function paginate($conditions = null, $fields = null, $order = null, $limit, $page = 1,$recursive = null, $extra = array()) {
+	/*public function paginate($conditions = null, $fields = null, $order = null, $limit, $page = 1,$recursive = null, $extra = array()) {
 		
 		 
 		 $sql = "SELECT * from cobranzas
@@ -85,7 +85,7 @@ class Cobranza extends AppModel {
 		$results = $this->query($sql);
 		 die(var_dump($results));
 		return $results[0][0]['count'];*/
-		 $conditions = compact('conditions');
+	/*	$conditions = compact('conditions');
         if ($recursive != $this->recursive) {
             $conditions['recursive'] = $recursive;
         }
@@ -95,9 +95,9 @@ class Cobranza extends AppModel {
             if (isset($extra['group'])) {
                 $count = $this->getAffectedRows();
             }
-       
+       	//die(var_dump($count));
         return $count;
-	}
+	}*/
 }
 
 ?>
